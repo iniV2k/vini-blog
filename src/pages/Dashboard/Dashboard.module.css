@@ -1,9 +1,9 @@
 .dashboard {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* Alinha o conteúdo no centro da página */
+  max-width: 1000px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 1em 0;
 }
 
 .dashboard h2 {
@@ -13,7 +13,7 @@
 
 .dashboard p {
   color: #aaa;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
 }
 
 .noposts {
@@ -28,32 +28,89 @@
   padding: 10px 25px;
 }
 
-.post_header,
+/* --- ESTILOS DA LISTA DE POSTS --- */
+
+/* Cabeçalho da lista (Título / Ações) */
+.post_header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0.8em;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1em;
+}
+
+/* Linha de cada post */
 .post_row {
   display: flex;
   justify-content: space-between;
-  width: 80%;
-  padding: 10px;
-}
-
-.post_header {
-  font-weight: bold;
-  border-bottom: 2px solid #ccc;
-}
-
-.post_row {
   align-items: center;
-  border: 1px solid #eee;
+  padding: 0.8em;
+  border-bottom: 1px solid #eee;
+}
+
+/* Última linha sem borda inferior */
+.post_row:last-child {
+  border-bottom: none;
 }
 
 .post_row p {
-  color: #000;
+  color: #333; /* Texto do título mais escuro */
+  margin: 0;
 }
 
+/* Contêiner para os botões de ação */
+.post_row div {
+  display: flex;
+  gap: 0.6em; /* Espaçamento consistente entre os botões */
+}
+
+/* Encontre esta regra e adicione as 3 novas linhas */
 .post_row button,
 .post_row a {
-  margin: 0 5px;
-  height: 30px;
-  width: 100px;
-  font-size: 0.7em;
+  margin: 0;
+  font-size: 0.9em;
+  padding: 0.4em 0.8em;
+  text-align: center; /* Manter como um fallback */
+  flex: 1;
+  width: clamp(90px, 8vw, 120px);
+
+  /* ADIÇÃO: Transforma o próprio botão/link em um contêiner flex
+       para centralizar perfeitamente o texto dentro dele. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- RESPONSIVIDADE PARA CELULARES --- */
+@media (max-width: 768px) {
+  /* Esconde o cabeçalho "Título/Ações" no mobile */
+  .post_header {
+    display: none;
+  }
+
+  /* Transforma cada linha em um card empilhado */
+  .post_row {
+    flex-direction: column;
+
+    /* MUDANÇA 1: Alinha o título e a div dos botões ao centro */
+    align-items: center;
+
+    gap: 1em;
+  }
+
+  /* Contêiner dos botões de ação */
+  .post_row div {
+    width: 100%;
+
+    /* MUDANÇA 2: Centraliza os botões dentro da div */
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .post_row button,
+  .post_row a {
+    max-width: 120px;
+  }
 }
