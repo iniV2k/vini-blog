@@ -1,31 +1,68 @@
+/* --- ESTILO PRINCIPAL DO CARD --- */
 .post_detail {
-  margin-bottom: 2em;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
 }
 
+/* --- ESTILO DA IMAGEM (A CORREÇÃO PRINCIPAL ESTÁ AQUI) --- */
 .post_detail img {
-  max-width: 600px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+
+  display: block;
+}
+
+/* --- CONTÊINER PARA O CONTEÚDO DE TEXTO --- */
+.post_content_container {
+  padding: 1.2em;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .post_detail h2 {
+  margin-top: 0;
   margin-bottom: 0.4em;
-}
+  font-size: 1.25rem;
 
-.post_detail .tags {
-  margin-bottom: 1.2em;
-  display: flex;
-}
-
-.tags p {
-  margin-right: 0.5em;
-}
-
-.tags span {
-  font-weight: bold;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .createdby {
   font-style: italic;
-  color: #444;
+  color: #555;
   font-size: 0.8em;
   margin-bottom: 1em;
+}
+
+.tags {
+  margin-bottom: 1.2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.tags p {
+  margin: 0;
+  padding: 0.2em 0.6em;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.tags span {
+  font-weight: bold;
+  color: #007bff;
 }

@@ -29,3 +29,23 @@
 .noposts a {
   padding: 10px 25px;
 }
+
+.post_list {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os posts quebrem para a próxima linha */
+  justify-content: center; /* Centraliza os posts */
+  gap: 2em; /* Adiciona espaçamento entre os posts */
+  width: 100%; /* Ocupa a largura total */
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  .post_list {
+    flex-direction: column; /* Posts ficam um abaixo do outro */
+    align-items: center; /* Centraliza os posts */
+  }
+
+  .post_detail {
+    width: 90%; /* Ajusta a largura dos posts para telas menores */
+  }
+}
