@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 // Router
-import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 // Context
 import { AuthProvider } from "./context/AuthContext";
@@ -50,7 +50,7 @@ function App() {
   return (
     <div className="App">
       <AuthProvider value={{ user }}>
-        <HashRouter>
+        <BrowserRouter>
           <Navbar />
           <div className="container">
             <Routes>
@@ -81,7 +81,7 @@ function App() {
             </Routes>
           </div>
           <Footer />
-        </HashRouter>
+        </BrowserRouter>
       </AuthProvider>
     </div>
   );
