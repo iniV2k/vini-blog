@@ -32,20 +32,20 @@
 
 .post_list {
   display: flex;
-  flex-wrap: wrap; /* Permite que os posts quebrem para a próxima linha */
-  justify-content: center; /* Centraliza os posts */
-  gap: 2em; /* Adiciona espaçamento entre os posts */
-  width: 100%; /* Ocupa a largura total */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  width: 100%;
 }
 
-/* Media Query para telas menores */
+/* RESPONSIVIDADE PARA TELAS MENORES */
 @media (max-width: 768px) {
   .post_list {
-    flex-direction: column; /* Posts ficam um abaixo do outro */
-    align-items: center; /* Centraliza os posts */
+    flex-direction: column;
+    align-items: center;
   }
 
   .post_detail {
-    width: 90%; /* Ajusta a largura dos posts para telas menores */
+    width: 90%;
   }
 }

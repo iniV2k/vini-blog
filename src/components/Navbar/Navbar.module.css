@@ -50,9 +50,9 @@
 
 .hamburger .bar {
   display: block;
-  width: 5vw;
-  height: 1vw;
-  margin: 1vw auto;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
   transition: all 0.3s ease-in-out;
   background-color: #333;
 }
@@ -61,16 +61,23 @@
   margin: 0;
 }
 
+/* --- ESTILOS PARA TELAS MAIORES (TABLETS E DESKTOPS) --- */
 @media (min-width: 768px) {
   .navbar {
     padding: 0.5em 2em;
   }
 
+  .brand {
+    font-size: 1.5em;
+  }
+
   .links_list {
     display: flex;
     flex-direction: row;
+    align-items: center;
     max-height: initial;
     overflow: visible;
+    width: auto;
   }
 
   .links_list li {
@@ -81,7 +88,7 @@
   }
 
   .links_list li a {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .hamburger {
