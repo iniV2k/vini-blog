@@ -1,7 +1,48 @@
 .login {
   text-align: center;
+  padding: 0 1em;
+}
+
+.login h1 {
+  margin-bottom: 0.5em;
 }
 
 .login p {
   color: #aaa;
+  margin-bottom: 2em;
+}
+
+.login form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.login form button {
+  align-self: center;
+  width: 50%;
+}
+
+.login label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1.2em;
+}
+
+.login label span {
+  margin-bottom: 0.4em;
+  font-weight: bold;
+}
+
+.login input {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.login .erro {
+  margin-top: 1em;
 }
