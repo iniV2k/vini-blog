@@ -3,11 +3,11 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px -2px 10px 0px;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 2em;
+  padding: 0.5em 2vw;
 }
 
 .brand {
-  font-size: 1.2em;
+  font-size: 4vw;
 }
 
 .brand span {
@@ -18,17 +18,73 @@
 .links_list {
   display: flex;
   list-style: none;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0.5em;
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.show_menu {
+  max-height: 300px;
 }
 
 .links_list li {
-  margin-right: 1em;
+  width: 100%;
+  margin-right: 0;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #eee;
 }
 
 .links_list li a {
-  padding: 0.4em 0.6em;
+  font-size: 5vw;
 }
 
-.active {
-  background-color: #000;
-  color: #fff;
+.hamburger {
+  display: block;
+  cursor: pointer;
+  order: 2;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 5vw;
+  height: 1vw;
+  margin: 1vw auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #333;
+}
+
+.navbar > * {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0.5em 2em;
+  }
+
+  .links_list {
+    display: flex;
+    flex-direction: row;
+    max-height: initial;
+    overflow: visible;
+  }
+
+  .links_list li {
+    margin-right: 1em;
+    padding: 0;
+    border-bottom: none;
+    width: auto;
+  }
+
+  .links_list li a {
+    font-size: 1.2em;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }

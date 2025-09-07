@@ -5,6 +5,7 @@
 
 .post_container img {
   max-width: 600px;
+  height: auto;
 }
 
 .post_container h3 {

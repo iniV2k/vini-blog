@@ -1,5 +1,3 @@
-// src/components/Navbar/Navbar.tsx
-
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import useAuthContext from "../../hooks/useAuthContext";
