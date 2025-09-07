@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 import PostDetail from "../../components/PostDetail/PostDetail";
 
-// Defina a interface Post
 interface Post {
   id: string;
   title: string;
@@ -45,7 +44,9 @@ const Home = () => {
           onChange={(e) => setQuery(e.target.value)}
           value={query}
         />
-        <button className="btn btn-dark">Pesquisar</button>
+        <button className={`${styles.search_button} btn btn-dark`}>
+          Pesquisar
+        </button>
       </form>
 
       <div className={styles.post_list}>
