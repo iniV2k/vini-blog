@@ -1,4 +1,4 @@
-/* --- ESTILO PRINCIPAL DO CARD --- */
+/* ESTILO PRINCIPAL DO CARD */
 .post_detail {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -10,20 +10,17 @@
   flex-direction: column;
 }
 
-/* --- ESTILO DA IMAGEM (A CORREÇÃO PRINCIPAL ESTÁ AQUI) --- */
+/* ESTILO DA IMAGEM */
 .post_detail img {
   width: 100%;
   height: 300px;
   object-fit: cover;
-
   display: block;
 }
 
-/* --- CONTÊINER PARA O CONTEÚDO DE TEXTO --- */
 .post_content_container {
   padding: 1.2em;
   flex-grow: 1;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,7 +30,6 @@
   margin-top: 0;
   margin-bottom: 0.4em;
   font-size: 1.25rem;
-
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;

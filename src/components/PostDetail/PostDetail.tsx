@@ -23,8 +23,6 @@ const PostDetail = ({ post }: { post: Post }) => {
               ))}
           </div>
         </div>
-
-        {/* O Link fica no final graças ao justify-content: space-between do pai */}
         <Link to={`/posts/${post.id}`} className="btn btn-outline">
           Ver detalhes
         </Link>

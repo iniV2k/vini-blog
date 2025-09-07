@@ -61,7 +61,7 @@
   margin: 0;
 }
 
-/* --- ESTILOS PARA TELAS MAIORES (TABLETS E DESKTOPS) --- */
+/* ESTILOS PARA TELAS MAIORES (TABLETS E DESKTOPS) */
 @media (min-width: 768px) {
   .navbar {
     padding: 0.5em 2em;
