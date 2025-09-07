@@ -2,7 +2,7 @@
   "name": "vini_blog",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://iniv2k.github.io/vini-blog",
+  "homepage": "https://iniv2k.github.io/vini-blog/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
