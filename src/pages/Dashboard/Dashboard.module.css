@@ -16,6 +16,11 @@
   margin-bottom: 2em;
 }
 
+.dashboard h2,
+.dashboard p {
+  text-align: center;
+}
+
 .noposts {
   text-align: center;
 }
