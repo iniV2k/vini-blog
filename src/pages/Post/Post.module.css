@@ -1,26 +1,57 @@
+/* ESTILOS DA PÁGINA DE DETALHES DO POST */
 .post_container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.post_container h1 {
   text-align: center;
-  max-width: 100%;
+  margin-bottom: 0.5em;
+  font-size: 2.2rem;
 }
 
 .post_container img {
-  max-width: 600px;
-  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+
+.post_container p {
+  text-align: left;
+  line-height: 1.6;
+  margin-bottom: 1em;
 }
 
 .post_container h3 {
-  margin-bottom: 0.2em;
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 .post_container .tags {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5em;
 }
 
 .tags p {
-  margin-right: 1em;
+  margin: 0;
+  background-color: #f2f2f2;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  font-size: 0.9em;
 }
 
 .tags span {
   font-weight: bold;
+  color: #007bff;
+}
+
+/* RESPONSIVIDADE PARA TELAS MENORES */
+@media (max-width: 768px) {
+  .post_container h1 {
+    font-size: 1.8rem;
+  }
 }

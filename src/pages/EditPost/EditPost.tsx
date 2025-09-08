@@ -1,8 +1,19 @@
+// React Hooks
 import { useEffect, useState } from "react";
+
+// CSS
 import styles from "./EditPost.module.css";
+
+// Custom Hook
 import { useUpdateDocument } from "../../hooks/useUpdateDocument";
+
+// Navegacao
 import { useNavigate, useParams } from "react-router-dom";
+
+// Interface
 import type { Post } from "../../interfaces/Post";
+
+// Custom Hook
 import { useFetchDocument } from "../../hooks/useFetchDocument";
 
 const EditPost = () => {

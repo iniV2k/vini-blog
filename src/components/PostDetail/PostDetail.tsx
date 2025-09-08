@@ -1,15 +1,17 @@
+// Navegacao
 import { Link } from "react-router-dom";
+
+// CSS
 import styles from "./PostDetail.module.css";
+
+// Interface
 import type { Post } from "../../interfaces/Post";
 
 const PostDetail = ({ post }: { post: Post }) => {
   return (
     <div className={styles.post_detail}>
       <img src={post.image} alt={post.title} />
-
-      {/* Este contêiner é a chave para o layout flex funcionar */}
       <div className={styles.post_content_container}>
-        {/* Agrupador para o conteúdo superior */}
         <div>
           <h2>{post.title}</h2>
           <p className={styles.createdby}>Por: {post.createdBy}</p>

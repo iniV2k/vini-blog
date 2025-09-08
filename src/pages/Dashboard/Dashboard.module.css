@@ -1,5 +1,5 @@
+/* ESTILO DA DASHBOARD */
 .dashboard {
-  /* Alinha o conteúdo no centro da página */
   max-width: 1000px;
   width: 95%;
   margin: 0 auto;
@@ -28,9 +28,6 @@
   padding: 10px 25px;
 }
 
-/* --- ESTILOS DA LISTA DE POSTS --- */
-
-/* Cabeçalho da lista (Título / Ações) */
 .post_header {
   display: flex;
   justify-content: space-between;
@@ -40,7 +37,6 @@
   margin-bottom: 1em;
 }
 
-/* Linha de cada post */
 .post_row {
   display: flex;
   justify-content: space-between;
@@ -49,61 +45,47 @@
   border-bottom: 1px solid #eee;
 }
 
-/* Última linha sem borda inferior */
 .post_row:last-child {
   border-bottom: none;
 }
 
 .post_row p {
-  color: #333; /* Texto do título mais escuro */
+  color: #333;
   margin: 0;
 }
 
-/* Contêiner para os botões de ação */
 .post_row div {
   display: flex;
-  gap: 0.6em; /* Espaçamento consistente entre os botões */
+  gap: 0.6em;
 }
 
-/* Encontre esta regra e adicione as 3 novas linhas */
 .post_row button,
 .post_row a {
   margin: 0;
   font-size: 0.9em;
   padding: 0.4em 0.8em;
-  text-align: center; /* Manter como um fallback */
+  text-align: center;
   flex: 1;
   width: clamp(90px, 8vw, 120px);
-
-  /* ADIÇÃO: Transforma o próprio botão/link em um contêiner flex
-       para centralizar perfeitamente o texto dentro dele. */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* --- RESPONSIVIDADE PARA CELULARES --- */
+/* RESPONSIVIDADE PARA TELAS MENORES */
 @media (max-width: 768px) {
-  /* Esconde o cabeçalho "Título/Ações" no mobile */
   .post_header {
     display: none;
   }
 
-  /* Transforma cada linha em um card empilhado */
   .post_row {
     flex-direction: column;
-
-    /* MUDANÇA 1: Alinha o título e a div dos botões ao centro */
     align-items: center;
-
     gap: 1em;
   }
 
-  /* Contêiner dos botões de ação */
   .post_row div {
     width: 100%;
-
-    /* MUDANÇA 2: Centraliza os botões dentro da div */
     justify-content: center;
   }
 }

@@ -1,4 +1,7 @@
+// Navegacao
 import { Link } from "react-router-dom";
+
+// CSS
 import styles from "./About.module.css";
 
 const About = () => {

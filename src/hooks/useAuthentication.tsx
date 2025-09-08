@@ -1,3 +1,4 @@
+// Firebase
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -5,14 +6,13 @@ import {
   signOut,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+
+// React Hooks
 import { useEffect, useState } from "react";
 
 export const useAuthentication = () => {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
-
-  // cleanup
-  // deal with memory leak
   const [cancelled, setCancelled] = useState(false);
   const auth = getAuth();
 
@@ -61,13 +61,11 @@ export const useAuthentication = () => {
     }
   };
 
-  // logout
   const logout = () => {
     checkIfIsCancelled();
     signOut(auth);
   };
 
-  // login
   const login = async (data: { email: string; password: string }) => {
     checkIfIsCancelled();
 

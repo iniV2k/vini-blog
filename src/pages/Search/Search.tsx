@@ -1,7 +1,14 @@
+// Link
 import { Link } from "react-router-dom";
+
+// Components
 import PostDetail from "../../components/PostDetail/PostDetail";
+
+// Custom Hooks
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 import { useQuery } from "../../hooks/useQuery";
+
+// CSS
 import styles from "./Search.module.css";
 
 interface Post {
@@ -27,7 +34,7 @@ const Search = () => {
   return (
     <div className={styles.search_container}>
       <h2>Resultados para a busca: {rawSearchTerm}</h2>
-      <div>
+      <div className={styles.post_list}>
         {loading && <p>Carregando...</p>}
         {!loading && posts && posts.length === 0 && (
           <div className={styles.noposts}>

@@ -8,7 +8,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
-// Router
+// Route
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 // Context
@@ -17,7 +17,7 @@ import { AuthProvider } from "./context/AuthContext";
 // Firebase
 import { onAuthStateChanged, type User } from "firebase/auth";
 
-// Hooks
+// Custom Hooks
 import { useAuthentication } from "./hooks/useAuthentication";
 
 // Pages

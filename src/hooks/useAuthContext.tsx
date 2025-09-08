@@ -1,4 +1,7 @@
+// React Hook
 import { useContext } from "react";
+
+// Context
 import { AuthContext, type AuthContextType } from "../context/AuthContext";
 
 const useAuthContext = (): AuthContextType => {

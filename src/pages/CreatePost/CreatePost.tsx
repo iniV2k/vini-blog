@@ -1,8 +1,17 @@
+// React Hooks
 import { useEffect, useState } from "react";
+
+// CSS
 import styles from "./CreatePost.module.css";
+
+// Custom Hooks
 import { useInsertDocument } from "../../hooks/useInsertDocuments";
-import useAuthContext from "../../hooks/useAuthContext";
 import { useNavigate } from "react-router-dom";
+
+// Context
+import useAuthContext from "../../hooks/useAuthContext";
+
+// Interface
 import type { PostData } from "../../interfaces/Post";
 
 const CreatePost = () => {

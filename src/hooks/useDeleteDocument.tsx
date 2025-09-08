@@ -1,6 +1,9 @@
-import { doc, deleteDoc } from "firebase/firestore"; // Removido 'DocumentData' desnecessário
-import { useEffect, useReducer, useState } from "react";
+// Firebase
+import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
+
+// React Hooks
+import { useEffect, useReducer, useState } from "react";
 
 const initialState: ReducerState = {
   loading: false,

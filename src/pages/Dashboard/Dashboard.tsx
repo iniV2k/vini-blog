@@ -1,9 +1,16 @@
+// Navegacao
 import { Link } from "react-router-dom";
+
+// Custom Hook
 import useAuthContext from "../../hooks/useAuthContext";
-import styles from "./Dashboard.module.css";
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
-import type { Post } from "../../interfaces/Post";
 import { useDeleteDocument } from "../../hooks/useDeleteDocument";
+
+// CSS
+import styles from "./Dashboard.module.css";
+
+// Interface
+import type { Post } from "../../interfaces/Post";
 
 const Dashboard = () => {
   const { user } = useAuthContext();

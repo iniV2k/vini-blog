@@ -1,3 +1,4 @@
+// Firebase
 import {
   collection,
   onSnapshot,
@@ -6,8 +7,10 @@ import {
   where,
   type DocumentData,
 } from "firebase/firestore";
-import { useEffect, useState } from "react";
 import { db } from "../firebase/config";
+
+// React Hooks
+import { useEffect, useState } from "react";
 
 export const useFetchDocuments = <T extends DocumentData>(
   docCollection: string,
@@ -44,7 +47,7 @@ export const useFetchDocuments = <T extends DocumentData>(
         (querySnapshot) => {
           const fetchedPosts = querySnapshot.docs.map((doc) => ({
             id: doc.id,
-            ...doc.data()
+            ...doc.data(),
           })) as unknown as T[];
 
           setDocuments(fetchedPosts);

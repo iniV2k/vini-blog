@@ -1,13 +1,21 @@
 /* ESTILO PRINCIPAL DO CARD */
 .post_detail {
-  background-color: #fff;
+  margin-bottom: 2em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
-  width: 300px;
+  width: 100%;
+  max-width: 340px;
   min-height: 480px;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post_detail:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ESTILO DA IMAGEM */
@@ -29,7 +37,7 @@
 .post_detail h2 {
   margin-top: 0;
   margin-bottom: 0.4em;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -39,12 +47,12 @@
 .createdby {
   font-style: italic;
   color: #555;
-  font-size: 0.8em;
+  font-size: 0.75em;
   margin-bottom: 1em;
 }
 
 .tags {
-  margin-bottom: 1.2em;
+  margin-bottom: 1em;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
@@ -61,4 +69,9 @@
 .tags span {
   font-weight: bold;
   color: #007bff;
+}
+
+.post_content_container .btn {
+  font-size: 0.85em;
+  padding: 0.6em 1em;
 }

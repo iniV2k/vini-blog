@@ -1,5 +1,10 @@
+// React Hooks
 import { useState, useEffect } from "react";
+
+// Custom Hook
 import { useAuthentication } from "../../hooks/useAuthentication";
+
+// CSS
 import styles from "./Login.module.css";
 
 const Login = () => {

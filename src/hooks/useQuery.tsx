@@ -1,4 +1,7 @@
+// React Hook
 import { useMemo } from "react";
+
+// Navegacao
 import { useLocation } from "react-router-dom";
 
 export function useQuery() {

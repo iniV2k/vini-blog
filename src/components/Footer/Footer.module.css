@@ -1,8 +1,27 @@
+/* ESTILO DO RODAPÉ */
 .footer {
-  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #edf3f6;
+  width: 100%;
+  padding: 2.5em 1em;
+  box-sizing: border-box;
+}
+
+.footer > * {
+  max-width: 100%;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0.5em 0;
+  color: #444;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 4em 2em;
+  }
 }

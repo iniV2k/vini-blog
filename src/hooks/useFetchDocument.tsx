@@ -1,8 +1,9 @@
-// src/hooks/useFetchDocument.ts
-
+// Firebase
 import { doc, getDoc, type DocumentData } from "firebase/firestore";
-import { useEffect, useState } from "react";
 import { db } from "../firebase/config";
+
+// React Hooks
+import { useEffect, useState } from "react";
 
 export const useFetchDocument = <T extends DocumentData>(
   docCollection: string,

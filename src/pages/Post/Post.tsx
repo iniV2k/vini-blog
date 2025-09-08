@@ -1,5 +1,10 @@
+// React Hooks
 import { useParams } from "react-router-dom";
+
+// CSS
 import styles from "./Post.module.css";
+
+// Custom Hooks
 import { useFetchDocument } from "../../hooks/useFetchDocument";
 
 const Post = () => {

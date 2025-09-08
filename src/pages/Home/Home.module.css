@@ -1,3 +1,4 @@
+/* ESTILOS DA HOME */
 .home {
   display: flex;
   flex-direction: column;
@@ -39,11 +40,10 @@
 }
 
 .post_list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 1.5em;
-  column-gap: 1em;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -61,13 +61,14 @@
   border-color: #000;
 }
 
-/* RESPONSIVIDADE PARA TELAS MENORES */
+/* RESPONSIVIDADE PARA TELAS MEDIAS */
 @media (max-width: 1024px) {
   .post_list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* RESPONSIVIDADE PARA TELAS MENORES */
 @media (max-width: 768px) {
   .home h1 {
     font-size: 1.6rem;

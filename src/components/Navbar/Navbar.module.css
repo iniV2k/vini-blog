@@ -1,3 +1,4 @@
+/* ESTILO DA NAVBAR */
 .navbar {
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.15) 0px -2px 10px 0px;
@@ -61,7 +62,7 @@
   margin: 0;
 }
 
-/* ESTILOS PARA TELAS MAIORES (TABLETS E DESKTOPS) */
+/* ESTILOS PARA TELAS MAIORES */
 @media (min-width: 768px) {
   .navbar {
     padding: 0.5em 2em;

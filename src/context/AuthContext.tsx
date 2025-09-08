@@ -1,4 +1,7 @@
+// Context e ReactNode
 import { createContext, useContext, type ReactNode } from "react";
+
+// Firebase
 import type { User } from "firebase/auth";
 
 export interface AuthContextType {

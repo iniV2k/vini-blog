@@ -1,7 +1,16 @@
+// React Hook
 import { useState } from "react";
+
+// CSS
 import styles from "./Home.module.css";
+
+// Navegacao
 import { Link, useNavigate } from "react-router-dom";
+
+// Custom Hook
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
+
+// Component
 import PostDetail from "../../components/PostDetail/PostDetail";
 
 interface Post {

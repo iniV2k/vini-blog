@@ -1,11 +1,14 @@
+// Firebase
 import {
   addDoc,
   collection,
   Timestamp,
   type DocumentData,
 } from "firebase/firestore";
-import { useEffect, useReducer, useState } from "react";
 import { db } from "../firebase/config";
+
+// React Hooks
+import { useEffect, useReducer, useState } from "react";
 
 const initialState = {
   loading: false,

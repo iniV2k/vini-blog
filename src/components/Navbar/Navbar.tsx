@@ -1,7 +1,14 @@
+// Navegacao
 import { NavLink } from "react-router-dom";
+
+// CSS
 import styles from "./Navbar.module.css";
+
+// Custom Hooks
 import useAuthContext from "../../hooks/useAuthContext";
 import { useAuthentication } from "../../hooks/useAuthentication";
+
+// React Hook
 import { useState } from "react";
 
 const Navbar = () => {
