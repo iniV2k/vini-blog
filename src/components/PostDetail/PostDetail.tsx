@@ -25,7 +25,7 @@ const PostDetail = ({ post }: { post: Post }) => {
               ))}
           </div>
         </div>
-        <Link to={`/posts/${post.id}`} className="btn btn-outline">
+        <Link to={`/posts/${post.id}`} className={styles.details_button}>
           Ver detalhes
         </Link>
       </div>

@@ -1,10 +1,13 @@
 /* ESTILO DA PÁGINA DE EDIÇÃO DE POSTS */
+
 .edit_post {
   text-align: center;
+  padding: 0 1em;
 }
 
 .edit_post h2 {
-  font-size: 2.2em;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
 }
 
 .edit_post p {
@@ -12,31 +15,89 @@
   margin-bottom: 2em;
 }
 
-.edit_post .preview_title {
-  margin-bottom: 0.2em;
-  color: #000;
+.edit_post form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit_post label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1.2em;
+}
+
+.edit_post label span {
+  margin-bottom: 0.4em;
   font-weight: bold;
 }
 
+.edit_post input,
+.edit_post textarea {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.edit_post textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.preview_title {
+  margin-bottom: 0.5em !important;
+  color: #333 !important;
+  font-weight: bold;
+  text-align: left;
+}
+
 .image_preview {
-  max-width: 60%;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 1.5em auto;
+  border-radius: 10px;
+  display: block;
 }
 
 .btn_confirm_edit {
   margin-top: 1em;
   background-color: transparent;
-  border-radius: 0;
   color: #000;
   border: 1px solid #000;
-  padding: 7px 30px;
+  padding: 10px 30px;
   font-size: 1em;
   font-weight: 500;
-  transition: background-color 0.6s;
+  transition: background-color 0.6s, color 0.6s;
+  cursor: pointer;
+  align-self: center;
+  width: 60%;
+  max-width: 300px;
 }
 
 .btn_confirm_edit:hover {
   background-color: #000;
   color: #fff;
+}
+
+.btn_confirm_edit:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVIDADE PARA TELAS MAIORES */
+
+@media (min-width: 768px) {
+  .edit_post h2 {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .edit_post h2 {
+    font-size: 1.rem;
+  }
 }

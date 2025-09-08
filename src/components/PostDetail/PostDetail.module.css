@@ -75,3 +75,9 @@
   font-size: 0.85em;
   padding: 0.6em 1em;
 }
+
+.details_button {
+  align-self: flex-end;
+  margin-top: 1em; 
+  white-space: nowrap;
+}

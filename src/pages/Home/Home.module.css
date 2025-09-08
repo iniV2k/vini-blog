@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 0 1em;
 }
 
@@ -61,13 +60,6 @@
   border-color: #000;
 }
 
-/* RESPONSIVIDADE PARA TELAS MEDIAS */
-@media (max-width: 1024px) {
-  .post_list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* RESPONSIVIDADE PARA TELAS MENORES */
 @media (max-width: 768px) {
   .home h1 {
@@ -87,17 +79,5 @@
 
   .search_form button {
     width: 100%;
-  }
-
-  .post_list {
-    display: block;
-  }
-
-  .post_list > * {
-    margin-bottom: 1.5em;
-  }
-
-  .post_list > *:last-child {
-    margin-bottom: 0;
   }
 }
