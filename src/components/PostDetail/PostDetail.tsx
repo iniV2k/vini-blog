@@ -6,8 +6,13 @@ import styles from "./PostDetail.module.css";
 
 // Interface
 import type { Post } from "../../interfaces/Post";
+import useAuthContext from "../../hooks/useAuthContext";
+import { useDeleteDocument } from "../../hooks/useDeleteDocument";
 
 const PostDetail = ({ post }: { post: Post }) => {
+  const { user } = useAuthContext();
+  const { deleteDocument, response } = useDeleteDocument("posts");
+
   return (
     <div className={styles.post_detail}>
       <img src={post.image} alt={post.title} />
@@ -28,6 +33,15 @@ const PostDetail = ({ post }: { post: Post }) => {
         <Link to={`/posts/${post.id}`} className={styles.details_button}>
           Ver detalhes
         </Link>
+        {user?.uid === "quBaKxYWdTgu0xYBOf0z1Woq0Wn1" && (
+          <button
+            className="btn btn-outline btn-danger"
+            onClick={() => deleteDocument(post.id)}
+            disabled={response.loading}
+          >
+            {response.loading ? "Apagando..." : "Excluir"}
+          </button>
+        )}
       </div>
     </div>
   );

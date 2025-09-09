@@ -69,7 +69,6 @@ const Home = () => {
             </Link>
           </div>
         )}
-
         {error && <p className="error">{error}</p>}
       </div>
     </div>

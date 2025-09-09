@@ -40,7 +40,7 @@ nav button {
   background-color: transparent;
   border: none;
   color: #000;
-  transition: 0.4s;
+  transition: 0.4s ease-in-out;
   font-size: 1em;
   cursor: pointer;
 }
@@ -87,6 +87,7 @@ textarea {
   border: none;
   padding: 10px 15px;
   font-size: 1em;
+  transition: 0.4s;
 }
 
 .btn.btn-dark {
@@ -113,7 +114,6 @@ textarea {
 
 .btn.btn-danger:hover {
   background-color: #dc3545;
-  transition: 0.4s;
 }
 
 button[disabled] {
